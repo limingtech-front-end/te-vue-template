@@ -1,0 +1,34 @@
+$colorBrighter:#fff;
+$colorMain:rgb(248,248,248);
+$colorSecondary:#ff8d00;
+$colorDark:#000;
+$colorLight:rgba(0,0,0,0.7);
+$colorLighten:rgba(0,0,0,0.2);
+$spaceSmall:1rem;
+$spaceMedium:2rem;
+$spaceBig:5rem;
+
+$lineHeightSmall:1.5em;
+$lineHeightMedium:1.7em;
+
+$fullSize:90%;
+
+$fontSmall:12px;
+
+$borderRadiusMedium:4px;
+
+@mixin noSpace{
+	padding:0;
+    margin:0;
+}
+
+@mixin animationRotate{
+	-webkit-transform:translate3d(0,0,0) rotate(0);
+	transform:translate3d(0,0,0) rotate(0);
+	-webkit-animation:rotate 1s linear 0s infinite;
+	animation:rotate 1s linear 0s infinite;
+}
+
+
+
+
