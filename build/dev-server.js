@@ -47,6 +47,7 @@ Object.keys(proxyTable).forEach(function (context) {
 app.use(require('connect-history-api-fallback')())
 
 // serve webpack bundle output
+console.log(devMiddleware)
 app.use(devMiddleware)
 
 // enable hot-reload and state-preserving

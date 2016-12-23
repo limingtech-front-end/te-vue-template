@@ -50,7 +50,7 @@ html,body{
   width:100%;
   height:100%;
   background-color:$colorBrighter;
-  box-shadow:-2px 0px 3px rgba(0,0,0,0.2),2px 0px 3px rgba(0,0,0,0.2);
+  box-shadow:$pageShadow;
   overflow:auto;
   -webkit-overflow-scrolling:touch;
 }
@@ -70,6 +70,9 @@ ul{
     @include noSpace;
   }
 }
+.background-light{
+  background-color:$backgroudLight;
+}
   .mu-appbar{
       background-color:$colorMain;
       color:$colorDark;
@@ -82,7 +85,43 @@ ul{
 .mu-popup-bottom{
 	width:100%;
 }
+.mu-item{
+  padding:1rem;
+}
+.mu-raised-button-full{
+  display:block;
+  width:90%;
+  margin:$spaceBig auto;
+  height:$spaceBig*0.7;
+  line-height:$spaceBig*0.7;
+}
+      .mu-text-field{
+        padding:0 $spaceSmall;
+        &.has-label .mu-text-field-label.float{
+          color:$colorDark;
+        }
+        &.focus-state{
+          color:$colorSecondary;
+        }
+        .mu-text-field-help{
+          padding:0 $spaceSmall;
+        }
+        .mu-text-field-focus-line{
+          background-color:$colorSecondary;
+        }
+        
+      }
 
+      .mu-raised-button-secondary{
+        background-color:$colorSecondary;
+      }
+.mu-switch input[type="checkbox"]:checked + .mu-switch-wrapper .mu-switch-track{
+  background-color:lighten($colorSecondary,30%);
+}
+.mu-switch input[type="checkbox"]:checked + .mu-switch-wrapper .mu-switch-thumb{
+  background-color:$colorSecondary;
+  color:$colorSecondary;
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }

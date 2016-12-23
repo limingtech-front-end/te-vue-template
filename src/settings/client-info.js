@@ -1,30 +1,33 @@
 import isIos from 'utilities/is-ios'
 import isAndroid from 'utilities/is-android'
-import isWechatWebview from 'utilities/is-wechat-webview'
+import isWechatWebView from 'threeparties/wechat/utilities/is-wechat-web-view'
 
 const renders={
-	iosWebview:'iosWebview',
-	androidWebview:'androidWebview',
-	wechatWebview:'wechatWebview',
+	iosWebView:'iosWebView',
+	androidWebView:'androidWebView',
+	wechatWebView:'wechatWebView',
 	browser:'browser'
 }
 
-function isIosWebview(){
-	return isIos() && !!window.Native	
+function isIosWebView(){
+	return isIos() && !!window.WebViewJavascriptBridge	
 }
 
-function isAndroidWebview(){
-	return isAndroid() && !!window.Native	
+function isAndroidWebView(){
+	return isAndroid() && !!window.WebViewJavascriptBridge	
 }
 
 function maybeBrowser(){
-	return !isWechatWebview() && !isIosWebview() && !isAndroidWebview()
+	return !isWechatWebView() && !isIosWebView() && !isAndroidWebView()
 }
 
 const render={
-	isAndroidWebview:isAndroidWebview(),
-	isIosWebview:isIosWebview(),
-	isWechatWebview:isWechatWebview(),
+	isAndroidWebView:isAndroidWebView(),
+	isIosWebView:isIosWebView(),
+	isNativeWebView:isAndroidWebView() || isIosWebView(),
+	isWechatWebView:isWechatWebView(),
+	isAndroid:isAndroid(),
+	isIos:isIos(),
 	isBrowser:maybeBrowser()
 }
 

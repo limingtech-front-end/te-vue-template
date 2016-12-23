@@ -12,7 +12,9 @@ var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
 module.exports = {
   entry: {
-    // app:'./src/share.js'
+    // app:'./src/components/share-footer-entry.js'
+    // app:'./src/native/android/settings/bridge-test-entry.js'
+    // app:'./src/native/ios/settings/bridge-test-entry.js'
     app: './src/main.js'
   },
   output: {
@@ -34,6 +36,8 @@ module.exports = {
       'services': path.resolve(__dirname, '../src/services'),
       'settings': path.resolve(__dirname, '../src/settings'),
       'utilities': path.resolve(__dirname, '../src/utilities'),
+      'threeparties': path.resolve(__dirname, '../src/threeparties'),
+      'native': path.resolve(__dirname, '../src/native'),
       'muse-components':'muse-ui/src'
     }
   },

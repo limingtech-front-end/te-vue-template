@@ -13,8 +13,6 @@ npm install
 `npm run dev`
 ###生产环境编译
 `npm run build`
-###demo页面地址
-`http://localhost:3333/#/peccancy-query`
 ##其他
 参考链接: [vue单文件组件](http://cn.vuejs.org/v2/guide/single-file-components.html)
 

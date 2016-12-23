@@ -1,9 +1,12 @@
 $colorBrighter:#fff;
 $colorMain:rgb(248,248,248);
 $colorSecondary:#ff8d00;
+$colorRed:#c60007;
+$colorWhite:#ffffff;
 $colorDark:#000;
 $colorLight:rgba(0,0,0,0.7);
 $colorLighten:rgba(0,0,0,0.2);
+$backgroudLight:#efeff4;
 $spaceSmall:1rem;
 $spaceMedium:2rem;
 $spaceBig:5rem;
@@ -16,7 +19,7 @@ $fullSize:90%;
 $fontSmall:12px;
 
 $borderRadiusMedium:4px;
-
+$pageShadow:-2px 0px 3px rgba(0, 0, 0, 0.2), 2px 0px 3px rgba(0, 0, 0, 0.2);
 @mixin noSpace{
 	padding:0;
     margin:0;
@@ -28,7 +31,28 @@ $borderRadiusMedium:4px;
 	-webkit-animation:rotate 1s linear 0s infinite;
 	animation:rotate 1s linear 0s infinite;
 }
-
+.mu-avatar{
+    border-radius:0!important;
+    background:#ffffff
+ }
+.mu-avatar-inner{
+    border-radius:0;
+ }
+.mu-avatar img{
+	border-radius:0;
+ }
+ .mu-date-display{
+  	background-color:$colorSecondary;
+ }
+.mu-day-button-bg{
+	background-color:$colorSecondary;
+}
+.mu-flat-button-primary{
+	color:$colorSecondary;
+}
+.mu-menu-item-wrapper.active{
+    color:$colorSecondary
+ }
 
 
 
